@@ -27,7 +27,7 @@ services:
       dockerfile: Dockerfile
       context: ./frontend
     ports:
-      - "25555:30002"
+      - "25555:30001"
     restart: always
     volumes:
       - ./frontend/app:/app
@@ -35,7 +35,7 @@ services:
       - .env
     command: |
       sh -c "
-      uv run -m uvicorn main:app --host "0.0.0.0" --port 30002 --reload
+      uv run -m uvicorn main:app --host "0.0.0.0" --port 30001 --reload
       "
     networks:
       - main_network
