@@ -13,7 +13,7 @@ class DatabaseSettings(BaseSettings):
     def DATABASE_URL(self) -> str:
         url = (
             f'postgresql+asyncpg://{self.PGUSER}:{self.PGPASSWORD}@'
-            f'{self.PGHOST}/{self.PGDATABASE}
+            f'{self.PGHOST}/{self.PGDATABASE}'
         )
         return url
 
