@@ -1,8 +1,11 @@
-{% extends "base.html" %}
 
+{% if user %}
 
-{% block content %}
+<button type="button" class="btn btn-light">User: {{ user.name }}</button>
+<button type="button" class="btn btn-warning">Logout</button>
+{% else %}
 
-Hello
+<a class="btn btn-success m-1" href="#">Login</a>
+<a class="btn btn-success" href="{{ url_for('user_register') }}">Register</a>
 
-{% endblock %}
+{% endif %}
